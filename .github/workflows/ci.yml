@@ -41,7 +41,7 @@ jobs:
 
       - name: Run Acceptance Tests
         env:
-           APP_BASE_URL: http://localhost:8000
+          APP_BASE_URL: http://localhost:8000
         run: |
           gunicorn --workers=2 --bind=0.0.0.0:8000 app.app:app &
           sleep 10
@@ -88,7 +88,7 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${{ github.sha }}
-            ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest
+            ${{ vars.DOCKERHUB_USERNAME }}/entregable-2-cicd:${{ github.sha }}
+            ${{ vars.DOCKERHUB_USERNAME }}/entregable-2-cicd:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
