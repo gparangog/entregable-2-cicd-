@@ -1,6 +1,8 @@
 # app/calculadora.py
 
 AUTOR = "Patricia, Alexander, David, Daniel"
+
+
 def sumar(a, b):
     return a + b
 
